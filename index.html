@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prashant Saru - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Prashant Saru</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="images/Profile.jpg" alt="Photo of Prashant Saru" width="400" height="600">
+            <p>
+                I am a BIT student at International American University, Kathmandu,
+                working toward a career as a SOC analyst in cybersecurity. I also do
+                freelance web development on the side.
+            </p>
+
+            <h3>Skills</h3>
+            <dl>
+                <div class="skill">
+                    <dt>HTML5</dt>
+                    <dd>Semantic markup and accessible page structure.</dd>
+                </div>
+                <div class="skill">
+                    <dt>Networking Basics</dt>
+                    <dd>DHCP, NAT, DNS, and static IP configuration.</dd>
+                </div>
+                <div class="skill">
+                    <dt>Linux</dt>
+                    <dd>Comfortable with Ubuntu and Kali Linux environments.</dd>
+                </div>
+                <div class="skill">
+                    <dt>SIEM Tools</dt>
+                    <dd>Basic experience with Wazuh for log analysis.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Mitra Agro Farm Website</h3>
+                <p>
+                    A static business website built for a local organic compost
+                    manure company, deployed with a custom domain.
+                </p>
+                <a href="https://mitraagro.com.np">View Live Site</a>
+            </article>
+
+            <article>
+                <h3>Home SOC Lab</h3>
+                <p>
+                    A virtualized security operations lab built with VMware Workstation,
+                    including Active Directory, pfSense, and Wazuh SIEM for brute-force
+                    detection practice.
+                </p>
+                <a href="https://github.com/PrashantSaru">View GitHub Profile</a>
+            </article>
+
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="30"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Send Message">
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Prashant Saru. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

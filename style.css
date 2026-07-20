@@ -1,0 +1,272 @@
+/* =========================================
+   CSE230 - Week 3 Assignment
+   Portfolio Stylesheet
+   Author: Prashant Saru
+   ========================================= */
+
+/* ---------- Reset & Base Setup ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #26312f;
+    background-color: #f4f7f6;
+}
+
+/* ---------- Color Palette ----------
+   Primary:    #0f2e2e (dark navy-teal)
+   Accent:     #14877c (teal)
+   Background: #f4f7f6 (very light gray-green)
+   Card BG:    #ffffff (white)
+   Text:       #26312f (dark charcoal-green)
+   Muted text: #5c6b68
+------------------------------------- */
+
+/* ---------- Header & Navigation ---------- */
+header {
+    background-color: #0f2e2e;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #14877c;
+}
+
+/* ---------- Main Layout ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #0f2e2e;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #14877c;
+    padding-bottom: 8px;
+}
+
+/* ---------- About Section ---------- */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+#about img {
+    border-radius: 8px;
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+#about > p,
+#about h3,
+#about dl {
+    flex: 1 1 300px;
+}
+
+#about h3 {
+    color: #0f2e2e;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+/* Skills - two column layout */
+dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 30px;
+}
+
+dl div.skill {
+    border-left: 3px solid #14877c;
+    padding-left: 12px;
+}
+
+dl dt {
+    font-weight: 700;
+    color: #0f2e2e;
+}
+
+dl dd {
+    color: #5c6b68;
+    margin-left: 0;
+    font-size: 0.92rem;
+    margin-top: 3px;
+}
+
+/* ---------- Projects Section ---------- */
+#projects article {
+    background-color: #f4f7f6;
+    border-left: 4px solid #14877c;
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+}
+
+#projects article:last-child {
+    margin-bottom: 0;
+}
+
+#projects article h3 {
+    color: #0f2e2e;
+    margin-bottom: 8px;
+}
+
+#projects article a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: #14877c;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#projects article a:hover {
+    background-color: #0f2e2e;
+}
+
+/* ---------- Contact Form ---------- */
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0f2e2e;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #14877c;
+}
+
+input[type="submit"] {
+    background-color: #0f2e2e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #14877c;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #5c6b68;
+    font-size: 0.9rem;
+}
+
+/* ---------- Responsive: Tablet & Mobile ---------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about img {
+        width: 180px;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    section h2 {
+        font-size: 1.25rem;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
